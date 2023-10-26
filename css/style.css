@@ -1,0 +1,106 @@
+.header-bg {
+  background-color: #000;
+}
+
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-bg {
+  background-color: #000;
+  /*Cria uma classe pra segurar toda a cor do container */
+}
+
+.header {
+  display: flex;
+  /*Itens lado a lado com o flex*/
+  flex-wrap: wrap;
+  /*Quando chega no momento que nao cabe do lado, ele quebra a linha ao inves de ficar em cima*/
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  /*Trava o crescimento ate 1200px, depois só vai alinhando ao centro*/
+  margin-left: auto;
+  /* Pra alinhar ao centro, se nao vai sempre alinhar com o canto */
+  margin-right: auto;
+  /* Pra alinhar ao centro, se nao vai sempre alinhar com o canto */
+}
+
+.header-menu {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  /*Quando chega no momento que nao cabe do lado, ele quebra a linha ao inves de ficar em cima*/
+}
+
+.header-menu a {
+  padding: 16px 0px;
+  /* Aumenta a área de contato pra cima e pra baixo caso use em mobile */
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+}
+
+.header-menu a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #fff;
+  margin-top: 4px;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.header-menu a:hover:after {
+  width: 100%;
+}
+
+.header a::after {
+  display: none;
+}
+
+@media (max-width: 800px) {
+
+  /* Quando a tela diminui pra 800PX, o menu muda conforme as definições abaixo */
+  .header-menu {
+    gap: 20px;
+  }
+
+  .header-menu a {
+    background-color: #111;
+    padding: 12px 16px;
+    border-radius: 4px;
+  }
+
+  .header-menu a:hover {
+    background: #FFBB00;
+  }
+}
+
+@media (max-width: 600px) {
+
+  /* Quando a tela diminui pra 800PX, o menu muda conforme as definições abaixo */
+  header-menu {
+    gap: 12px;
+  }
+
+  .header-menu a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
